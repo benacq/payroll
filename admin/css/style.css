@@ -1,0 +1,676 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.profile-pic-error{
+  position: absolute;
+}
+
+
+
+/* ADD ALOWANCE AND DEDUCTION MODAL*/
+
+.edit-allowance-modal,.edit-deduction-modal{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 10;
+}
+.allowance-modal,.deduction-modal{
+  height: 300px;
+  width: 50%;
+  margin: auto;
+  margin-top: 140px;
+  background: #ddd;
+}
+.allowance-modal>div>.close-allowance-modal,.deduction-modal>div>.close-deduction-modal{
+  color: red;
+  font-size: 30px;
+  float: right;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.allowance-modal>div>.close-allowance-modal:active,.deduction-modal>div>.close-deduction-modal:active{
+  transform: scale(0.95);
+}
+.edit-allowance-input,.edit-deduction-input{
+  display: block;
+  margin: auto;
+  width: 100%;
+  min-height: 35px;
+  max-height: 100px;
+  margin-top: 5px;
+  padding: 5px;
+  transition: 700ms;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  resize: vertical;
+}
+.edit-allowance-input:focus,.edit-deduction-input:focus{
+  border: 3px solid #bfdeff;
+  transition: 700ms;
+}
+
+.edit-wrap{
+  margin-top: 30px;
+  width: 80%;
+  margin: auto;
+  padding-top: 40px;
+}
+.submit-edit-allowance,.submit-edit-deduction{
+  height: 40px;
+  width: 150px;
+  margin: auto;
+  margin-top: 10px;
+}
+.submit-edit-allowance>input[type="submit"],.submit-edit-deduction>input[type="submit"]{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+.deduction-error,.deduction-success,.allowance-error,.allowance-success{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background: #f8d7da;
+  color: #9f1c43;
+  text-align: center;
+  line-height: 45px;
+  left: 0;
+  right: 0;
+  display: none;
+  top: 0;
+  z-index: 20;
+}
+.deduction-success,.allowance-success{
+  background: #d4edda;
+  color: #156c7d;
+}
+.allowance-modal-wrap,.deduction-modal-wrap{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 10;
+}
+.allowance-modal-wrap>.modal,.deduction-modal-wrap>.modal{
+  height: 300px;
+  width: 50%;
+  margin: auto;
+  margin-top: 140px;
+  background: #ddd;
+}
+.allowance-modal-wrap>.modal>.modal-header,.deduction-modal-wrap>.modal>.modal-header{
+  height: 40px;
+  width: 100%;
+}
+.allowance-modal-wrap>.modal>.modal-header>span,.deduction-modal-wrap>.modal>.modal-header>span{
+  color: rgb(255, 51, 0);
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+}
+.allowance-modal-wrap>.modal>.modal-header>span:hover,.deduction-modal-wrap>.modal>.modal-header>span:hover{
+  color: red;
+  transform: scale(1.1);
+}
+.modal-body>.deduction-input,.modal-body>.allowance-input{
+  display: block;
+  margin: auto;
+  width: 80%;
+  min-height: 35px;
+  max-height: 100px;
+  margin-top: 5px;
+  padding: 5px;
+  transition: 700ms;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  resize: vertical;
+}
+.modal-body>.deduction-input:focus,.modal-body>.allowance-input:focus{
+  border: 3px solid #bfdeff;
+  transition: 700ms;
+}
+.modal-body>.submit-deduction>input[type="submit"],.modal-body>.submit-allowance>input[type="submit"]{
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  width: 160px;
+  height: 35px;
+  
+}
+/* ADD ALOWANCE AND DEDUCTION MODAL*/
+
+/* DELETE ALLOWANCE AND DEDUCTION */
+.delete-allowance{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.delete-allowance>.confirm-delete{
+  width:30%;
+  height: 150px;
+  padding: 5px;
+  background: #eee;
+  margin: auto;
+  margin-top: 15%;
+}
+.delete-allowance>.confirm-delete>h1.confirm-dialogue{
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.delete-allowance>.confirm-delete>.confirm{
+  margin-top: 20px;
+  text-align: center;
+}
+.delete-allowance>.confirm-delete>.confirm>.no{
+  border: 1px solid cornflowerblue;
+  padding: 5px;
+  display: inline-block;
+  width: 80px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.delete-allowance>.confirm-delete>.confirm>.yes{
+  border: 1px solid cornflowerblue;
+  padding: 5px;
+  display: inline-block;
+  width: 80px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.delete-allowance>.confirm-delete>.confirm>.yes:active, .delete-allowance>.confirm-delete>.confirm>.no:active{
+  transform: scale(0.95);
+}
+.delete-allowance>.confirm-delete>.confirm>.yes:hover{
+  background: #ff4242;
+  transition: 600ms;
+}
+.delete-allowance>.confirm-delete>.confirm>.no:hover{
+  background: cornflowerblue;
+  transition: 600ms;
+}
+
+
+
+/* DEDUCTION DELETE */
+.delete-deduction{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.delete-deduction>.confirm-delete{
+  width:30%;
+  height: 150px;
+  padding: 5px;
+  background: #eee;
+  margin: auto;
+  margin-top: 15%;
+}
+.delete-deduction>.confirm-delete>h1.confirm-dialogue{
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 30px;
+}
+.delete-deduction>.confirm-delete>.confirm{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+.delete-deduction>.confirm-delete>.confirm>.no{
+  border: 1px solid cornflowerblue;
+  padding: 5px;
+  display: inline-block;
+  width: 80px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.delete-deduction>.confirm-delete>.confirm>.yes{
+  border: 1px solid cornflowerblue;
+  padding: 5px;
+  display: inline-block;
+  width: 80px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.delete-deduction>.confirm-delete>.confirm>.yes:active, .delete-deduction>.confirm-delete>.confirm>.no:active{
+  transform: scale(0.95);
+}
+.delete-deduction>.confirm-delete>.confirm>.yes:hover{
+  background: #ff4242;
+  transition: 600ms;
+}
+.delete-deduction>.confirm-delete>.confirm>.no:hover{
+  background: cornflowerblue;
+  transition: 600ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DELETE ALLOWANCE AND DEDUCTION */
+
+
+
+
+/* ADD ALOWANCE */
+.input-container-grid-child>div.error{
+  background: #f8d7da;
+  color: #9f1c43;
+}
+.work-area>.addMore{
+  float: right;
+  margin-top: -45px;
+  height: 35px;
+  width: 150px;
+  /* border: none; */
+}
+#registration-error{
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 10;
+  text-align: center;
+  line-height: 45px;
+  display: none;
+  background: #f8d7da;
+  color: #bc3c43;
+  font-weight: 600;
+  font-size: 20px;
+}
+#registration-success{
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 10;
+  text-align: center;
+  line-height: 45px;
+  display: none;
+  background: #d4edda;
+  color: #156c7d;
+  font-weight: 600;
+  font-size: 20px;
+}
+#passWrap {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+div>#countDown {
+  color: crimson;
+  font-weight: 500;
+  display: block;
+}
+
+div>#disPass,
+div>#countDown {
+  text-align: center;
+}
+
+#caution {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  margin: auto;
+  margin-top: 2px;
+  width: 450px;
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+  line-height: 21px;
+  text-align: center;
+}
+
+a {
+  color: cornflowerblue;
+}
+
+#quick-access-side {
+  width: 20%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: #222;
+}
+
+.work-area {
+  background: #ccc;
+  width: 80%;
+  padding: 10px 20px 10px 20px;
+  float: right;
+  margin-top: 50px;
+}
+
+.work-area>h1.page-header {
+  height: 45px;
+}
+
+.work-area>.addEmp {
+  display: inline-block;
+  height: 35px;
+  width: 150px;
+  background: cornflowerblue;
+  color: #eee;
+  text-align: center;
+  line-height: 30px;
+  border: 2px solid #eee;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+}
+
+.work-area>.content {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: inset -2px 1px 1px 0px rgba(0, 0, 0, 0.1), inset -2px -2px 1px 1px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.work-area>.content>.data-wrap {
+  width: 98%;
+  min-height: 40px;
+  margin: auto;
+  display: flex;
+  background: #ddd;
+}
+
+.work-area>.content>.data-wrap>.data {
+  width: 25%;
+  min-height: 40px;
+  padding-bottom: 5px;
+}
+
+.work-area>.content>.no-data-error {
+  color: cornflowerblue;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.work-area>.content>.data-wrap>.data>h1 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.work-area>.content>.data-wrap>.data-head {
+  padding: 5px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.work-area>.content>.data-wrap:nth-child(odd) {
+  background: #eee;
+}
+
+.work-area>.content>.data-wrap>.data>button {
+  /* width: 70px; */
+  height: 30px;
+  padding: 8px;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  margin: 5px 0 0 8px;
+}
+
+.work-area>.content>.data-wrap>.data>button:active {
+  transform: scale(0.99);
+  border: 1px solid #888;
+}
+
+.work-area>.content>.data-wrap>.data>button:hover {
+  opacity: 0.8;
+}
+
+.work-area>.content>.data-wrap>.data>button.edit {
+  background: cornflowerblue;
+  padding-left: 10px;
+}
+
+.work-area>.content>.data-wrap>.data>button.delete {
+  color: rgb(252, 80, 80);
+  border: 1px solid red;
+}
+
+.work-area>.content>.data-wrap>.more-info>i {
+  color: cornflowerblue;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 24px;
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.35s ease-in-out;
+}
+
+.work-area>.content>.data-wrap>.more-info>i:hover {
+  /* text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2); */
+  transform: scale(1.1);
+  color: rgb(142, 194, 255);
+  margin-top: 7px;
+}
+
+/* ADD EMPLOYEE STYLE */
+.content>form {
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+
+.content>form>h1 {
+  margin-bottom: 10px;
+}
+
+form>.input-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+}
+
+form>.form-hidden-default,
+.form-title-hidden {
+  display: none;
+}
+
+.input-container-grid>.input-container-grid-child>input,
+.form-input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background: #fafafa;
+  border: 1px solid rgb(226, 224, 224);
+  font-size: 17px;
+  padding-left: 5px;
+}
+
+.input-container-grid>.input-container-grid-child>input:focus {
+  border: 1px solid cornflowerblue;
+}
+
+#profile-pic {
+  padding: 0;
+  border-radius: 0;
+}
+
+#pass-pic-info {
+  border: none;
+  background: #fff;
+}
+
+.input-container-grid>.submit-btn-wrap {
+  /* background: red; */
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+}
+
+.input-container-grid>.submit-btn-wrap>input[type="submit"] {
+  background: cornflowerblue;
+  display: inline-block;
+  border: none;
+  height: 40px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+}
+
+.input-container-grid>.submit-btn-wrap>input[type="submit"]:active {
+  transform: scale(0.99);
+}
+
+
+
+.content>form>.carousel-wrap {
+  text-align: center;
+  min-height: 30px;
+  margin-top: 40px;
+}
+
+.content>form>.carousel-wrap>span {
+  text-align: center;
+  background: rgb(192, 192, 192);
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.content>form>.carousel-wrap>span.carousel-active {
+  background: #000;
+}
+
+
+/* EMPLOYEE MASTERLIST STYLE STARTS*/
+.modal-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.more-on-emp-modal {
+  width: 40%;
+  background: #fff;
+  margin: auto;
+  margin-top: 10%;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
+}
+
+.modal-head {
+  height: 50px;
+  width: 100%;
+  background: #202340;
+  text-align: center;
+  color: #ddd;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.modal-head>span {
+  float: right;
+  font-size: 30px;
+  color: #e0e0e0;
+  margin-right: 10px;
+  cursor: default;
+}
+
+.modal-head>span:hover {
+  color: red;
+  cursor: pointer;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+  text-align: left;
+}
+td {
+  border: 1px solid #ebebeb;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.row-title {
+  width: 40%;
+}
+
+/* EMPLOYEE MASTERLIST STYLE ENDS*/

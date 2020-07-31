@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+#edit-success{
+    width: 100%;
+    height: 50px;
+    background: #d4edda;
+    z-index: 10;
+    position: fixed;
+    font-weight: bold;
+    top: 0;
+    color: #155760;
+    display: none;
+    text-align: center;
+    line-height: 45px;
+}
+.work-area{
+    width: 100% !important; 
+}
+.edit-profile-wrap{
+    width: 85%;
+    height: 400px;
+    background: #e9e9e9;
+    margin: auto;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
+    margin-top: 50px;
+}
+.edit-profile-wrap>form{
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 4px;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    padding: 15px;
+}
+.edit-profile-wrap>form>.grid-child>.form-input{
+    height: 45px;
+    border: none;
+    margin-top: 5px;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.edit-profile-wrap>form>.grid-child>.form-input:focus{
+    border: 4px solid #bfdeff;
+    transition: 500ms;
+}
+.edit-profile-wrap>form>.submit-btn-wrap{
+    margin-top: 50px;
+    display: block !important;
+    grid-column: 2 / 3;
+}
+.edit-profile-wrap>form>.submit-btn-wrap>input[type="submit"]{
+    height: 40px;
+    width: 100%;
+    border: none;
+    background: cornflowerblue;
+}
+.edit-profile-wrap>form>.submit-btn-wrap>input[type="submit"]:hover{
+    background: rgb(50, 108, 216);
+}
+.edit-profile-wrap>form>.submit-btn-wrap>input[type="submit"]:active{
+    transform: scale(0.96);
+}
+.grid-child>div.error{
+    background: #f8d7da;
+    color: #9f1c43;
+}

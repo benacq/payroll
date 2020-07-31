@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#addAnnouncement{
+    float: right;
+    clear: both;
+    position: relative;
+    top: -45px;
+    padding: 5px;
+}
+
+.announcement-modal-wrap{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 10;
+}
+.announcement-modal-wrap>.modal{
+    height: 300px;
+    width: 50%;
+    margin: auto;
+    margin-top: 140px;
+    background: #ddd;
+}
+.announcement-modal-wrap>.modal>.modal-header{
+    height: 40px;
+    width: 100%;
+}
+.announcement-modal-wrap>.modal>.modal-header>span{
+    color: rgb(255, 51, 0);
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+.announcement-modal-wrap>.modal>.modal-header>span:hover{
+    color: red;
+    transform: scale(1.1);
+}
+/* .announcement-modal-wrap>.modal>.modal-body{
+} */
+.announcement-modal-wrap>.modal>.modal-body>textarea{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 150px;
+    resize: vertical;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    max-height: 150px;
+}
+.announcement-modal-wrap>.modal>.modal-body>textarea:focus{
+    border: 2px solid #a7d2ff;
+}
+.announcement-modal-wrap>.modal>.modal-body>.submit-announcement{
+    margin-top: 30px;
+}
+.announcement-modal-wrap>.modal>.modal-body>.submit-announcement>input[type="submit"]{
+    height: 40px;
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+.no-announcement{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: cornflowerblue;
+    letter-spacing: 2px;
+  }
+  .announcement-wrap{
+      background: #f4f4f4;
+      padding: 5px;
+      margin-top: 10px;
+      box-shadow: 1px -1px 1px 2px rgba(204, 204, 204, 0.2);
+  }
+  .announcement>span.announce-date{
+    /* float: right !important; */
+    position: absolute; 
+    right: 35px;
+    font-size: 14px;
+    opacity: 0.4;
+    font-style: italic;
+}
+  .announce-error, .announce-success{
+      background: #f8d7da;
+      color: #bc3c43;
+      width: 100%;
+      height: 50px;
+      top: 0;
+      position: fixed;
+      /* font-family: sans-serif; */
+      text-transform: uppercase;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 45px;
+      display: none;
+      left: 0;
+      right: 0;
+      z-index: 100;
+  }
+  .announce-success{
+    background: #d4edda;
+    color: #156c7d;
+  }

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin-top: -10px;
+    width: 100%;
+}
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+tr:hover {
+    background: #bfdeff;
+    transition: 500ms;
+}
+tr:first-child {
+    background: #fff;
+}
+.page-header{
+    /* background: red; */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 20%;
+}
+td:last-child{
+    width: 40%;
+}

@@ -1,0 +1,46 @@
+/* NAV */
+#main-section>nav{
+    height: 50px;
+    width: 100%;
+    background: cornflowerblue;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #eee;
+    right: 0;
+    z-index: 1;
+}
+nav>#logout{
+    height: inherit;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 12px;
+    clear: both;
+}
+nav>#logout>a{
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    margin-top: -8px;
+    text-align: center;
+    line-height: 25px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    color: #eee;
+}
+nav>#logout>a:hover{
+    background: rgb(7, 138, 245);
+}
+div.company-name{
+    font-size:20px;
+    display: inline-block;
+    font-weight:550;
+    color:#eee;
+    margin:10px 0 0 6px;
+    font-family:sans-serif;
+    letter-spacing:2px;
+}
+
+/* NAV ENDS */
